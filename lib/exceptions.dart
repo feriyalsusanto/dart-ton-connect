@@ -12,7 +12,7 @@ class TonConnectError implements Exception {
 }
 
 class WalletAlreadyConnectedError extends TonConnectError {
-  WalletAlreadyConnectedError(String? message) : super(message);
+  WalletAlreadyConnectedError(super.message);
 
   @override
   final String? info =
@@ -20,7 +20,7 @@ class WalletAlreadyConnectedError extends TonConnectError {
 }
 
 class WalletNotConnectedError extends TonConnectError {
-  WalletNotConnectedError(String? message) : super(message);
+  WalletNotConnectedError(super.message);
 
   @override
   final String? info =
@@ -28,35 +28,35 @@ class WalletNotConnectedError extends TonConnectError {
 }
 
 class WalletNotSupportFeatureError extends TonConnectError {
-  WalletNotSupportFeatureError(String? message) : super(message);
+  WalletNotSupportFeatureError(super.message);
 
   @override
   final String? info = "Wallet doesn't support requested feature method.";
 }
 
 class FetchWalletsError extends TonConnectError {
-  FetchWalletsError(String? message) : super(message);
+  FetchWalletsError(super.message);
 
   @override
   final String? info = 'An error occurred while fetching the wallets list.';
 }
 
 class UnknownError extends TonConnectError {
-  UnknownError(String? message) : super(message);
+  UnknownError(super.message);
 
   @override
   final String? info = 'Unknown error.';
 }
 
 class BadRequestError extends TonConnectError {
-  BadRequestError(String? message) : super(message);
+  BadRequestError(super.message);
 
   @override
   final String? info = 'Request to the wallet contains errors.';
 }
 
 class UnknownAppError extends TonConnectError {
-  UnknownAppError(String? message) : super(message);
+  UnknownAppError(super.message);
 
   @override
   final String? info =
@@ -64,14 +64,14 @@ class UnknownAppError extends TonConnectError {
 }
 
 class UserRejectsError extends TonConnectError {
-  UserRejectsError(String? message) : super(message);
+  UserRejectsError(super.message);
 
   @override
   final String? info = 'User rejects the action in the wallet.';
 }
 
 class ManifestNotFoundError extends TonConnectError {
-  ManifestNotFoundError(String? message) : super(message);
+  ManifestNotFoundError(super.message);
 
   @override
   final String? info =
@@ -79,7 +79,7 @@ class ManifestNotFoundError extends TonConnectError {
 }
 
 class ManifestContentError extends TonConnectError {
-  ManifestContentError(String? message) : super(message);
+  ManifestContentError(super.message);
 
   @override
   final String? info =

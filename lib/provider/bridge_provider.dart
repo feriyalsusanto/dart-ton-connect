@@ -107,7 +107,7 @@ class BridgeProvider extends BaseProvider {
         Future.delayed(const Duration(seconds: disconnectTimeout)),
       ]);
     } catch (e) {
-      logger.e('Provider disconnect', e);
+      logger.e('Provider disconnect', error: e);
     } finally {
       if (!completer.isCompleted) {
         await _removeSession();
